@@ -1,0 +1,63 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@section CustomStyles {
+    <style>
+        body {
+            background: linear-gradient(to right, #ffffff, #f2f2e6);
+            color: #333;
+        }
+        .centered-content {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .menu-background {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .menu-link {
+            display: block; 
+            color: #007bff; 
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .uno-title {
+            color: #ff0000; /* Red color */
+            font-size: 5rem; /* Responsive font size */
+            font-weight: bold; /* Bold text */
+            text-align: center; /* Center the text */
+            margin-bottom: 20px; /* Slightly reduced margin */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 6px; /* Increased letter spacing */
+            line-height: 1.2; /* Adjusted line height */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+        }
+        
+        .logo{
+            width: 250px;
+            height: 200px;
+            margin: 10px;
+        }
+
+    </style>
+}
+
+<div class="centered-content">
+    <img src="uno.svg" alt="Logo" class="logo">
+    <div class="uno-title">Uno Game</div>
+    <div class="menu-background">
+        <a class="menu-link" asp-area="" asp-page="/NewGame/NewGame">New Game</a>
+        <a class="menu-link" asp-area="" asp-page="/LoadGame/LoadGame">Load Game</a>
+        <a class="menu-link" asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+</div>
